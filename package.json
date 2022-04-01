@@ -1,0 +1,20 @@
+{
+  "name": "@dcomp/repo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:all": "$npm_execpath workspaces foreach -pv --topological-dev run build",
+    "clean:all": "$npm_execpath workspaces foreach -p run clean",
+    "dev:all": "$npm_execpath workspaces foreach -piv -j unlimited run dev",
+    "publish:all": "$npm_execpath workspaces foreach -v --topological-dev --no-private npm publish --tolerate-republish --access public"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.1",
+    "prettier-plugin-pkg": "^0.11.2",
+    "prettier-plugin-sh": "^0.8.2",
+    "typescript": "^4.6.3"
+  },
+  "packageManager": "yarn@3.2.0"
+}

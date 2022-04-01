@@ -1,0 +1,45 @@
+{
+  "name": "@dcomp/generator",
+  "type": "module",
+  "description": "Generate docker-compose.yml from JavaScript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cprecioso/dcomp.git"
+  },
+  "homepage": "https://github.com/cprecioso/dcomp/tree/main/packages/generator#readme",
+  "bugs": {
+    "url": "https://github.com/cprecioso/htptp/issues?q=is%3Agenerator"
+  },
+  "author": "Carlos Precioso",
+  "license": "ISC",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": null
+    }
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "rollup --config",
+    "clean": "del-cli dist",
+    "dev": "rollup --config --watch",
+    "prepack": "$npm_execpath run build"
+  },
+  "dependencies": {
+    "@dcomp/defs": "workspace:^",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@dcomp/build": "workspace:*",
+    "@types/js-yaml": "^4.0.5",
+    "del-cli": "^4.0.1",
+    "rollup": "^2.70.1",
+    "typescript": "^4.6.3"
+  },
+  "packageManager": "yarn@3.2.0"
+}
