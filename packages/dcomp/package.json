@@ -35,11 +35,12 @@
   "dependencies": {
     "@dcomp/defs": "workspace:^",
     "@dcomp/generator": "workspace:^",
-    "liftoff": "^4.0.0"
+    "clipanion": "^3.2.0-rc.10",
+    "fs-extra": "^10.0.1"
   },
   "devDependencies": {
     "@dcomp/build": "workspace:*",
-    "@types/liftoff": "^4.0.0",
+    "@types/fs-extra": "^9.0.13",
     "@types/node": "^16",
     "del-cli": "^4.0.1",
     "rollup": "^2.70.1",
