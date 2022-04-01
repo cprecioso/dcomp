@@ -1,5 +1,6 @@
 {
   "name": "@dcomp/generator",
+  "version": "0.1.0",
   "type": "module",
   "description": "Generate docker-compose.yml from JavaScript",
   "repository": {

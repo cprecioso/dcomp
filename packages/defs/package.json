@@ -1,5 +1,6 @@
 {
   "name": "@dcomp/defs",
+  "version": "0.1.0",
   "type": "module",
   "description": "Entity definitions for dcomp",
   "repository": {
