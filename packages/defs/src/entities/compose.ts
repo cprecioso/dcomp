@@ -10,7 +10,6 @@ export interface ComposeDefinition
   extends OverrideProperties<
     ComposeSpec,
     {
-      name: never;
       services?: Service[];
       networks?: Network[];
       volumes?: Volume[];
@@ -25,7 +24,6 @@ export class Compose extends BaseEntity<"compose", ComposeDefinition> {
 
     return {
       ...this._definition,
-      name: this.name,
       services: internalDeps.asSpecRecordOfType("service"),
       volumes: internalDeps.asSpecRecordOfType("volume"),
       networks: internalDeps.asSpecRecordOfType("network"),
